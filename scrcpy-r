@@ -30,8 +30,9 @@ adb tcpip 5500
 read -p "Please enter the IP address of the phone: " phone_ip;
 adb connect $phone_ip:5500 
 
-echo "Please disconnect your phone and run scrcpy"
-# scrcpy
+# echo "Please disconnect your phone and run scrcpy"
+read -p "Please disconnect your phone and run scrcpy: " run_scrcpy;
+scrcpy
 
  ;;
 	-h) #get help
