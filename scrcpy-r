@@ -27,3 +27,4 @@ echo "5. The phone and the laptop are connected on the same network"
 adb devices
 adb tcpip 5500
 adb connect $1:5500
+scrcpy
