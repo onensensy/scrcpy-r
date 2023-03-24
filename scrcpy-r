@@ -28,7 +28,7 @@ case $1 in
 adb devices #List devices
 adb tcpip 5500
 read -p "Please enter the IP address of the phone: " phone_ip;
-adb connect $phone_ip:5500 --select-tcpip
+adb connect $phone_ip:5500 --select-tcpip 
 scrcpy
 
  ;;
