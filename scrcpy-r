@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#scrcpy-r Remote scrcpy simplified version 1.0
+#This is a simplified and customized scrcpy to apply tcpip more easily, using adb over tcpip to remote control an android phone on linux - Scripted by Sensy
+# The Phone MUST initially be plugged in with ADB mode enabled
+
+echo ""
+echo "scrcpy-r by Sensy --VERSION 1.0"
+echo "This is a simplified and customized scrcpy to apply tcpip more easily, using adb over tcpip to remote control an android phone on linux."
+echo "Scripted by Sensy"
+
+echo ""
+echo "Excecuting..."
