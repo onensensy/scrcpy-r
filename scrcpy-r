@@ -12,6 +12,26 @@ echo "Scripted by Sensy"
 
 
 echo ""
+# echo "USAGE"
+# echo "scrcpy-r [ip address]"
+# echo ""
+
+# echo "INSTRUCTIONS"
+# echo "Please ensure that the following conditions are all met:"
+# echo "1. The android phone is connected via USB to the pc"
+# echo "2. Debugging mode is activated in the android"
+# echo "3. ADB is installed on ubuntu"
+# echo "4. scrcpy is installed on ubuntu"
+# echo "5. The phone and the laptop are connected on the same network"
+
+
+case $1 in 
+
+	'')
+read -p "Please enter the IP address of the phone: " choice;
+ ;;
+	-h) #get help
+echo ""
 echo "USAGE"
 echo "scrcpy-r [ip address]"
 echo ""
@@ -23,8 +43,7 @@ echo "2. Debugging mode is activated in the android"
 echo "3. ADB is installed on ubuntu"
 echo "4. scrcpy is installed on ubuntu"
 echo "5. The phone and the laptop are connected on the same network"
+;;
 
-adb devices
-adb tcpip 5500
-adb connect $1:5500
-scrcpy
+
+ esac
