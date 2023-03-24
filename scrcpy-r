@@ -9,9 +9,6 @@ echo "scrcpy-r by Sensy --VERSION 1.0"
 echo "This is a simplified and customized scrcpy to apply tcpip more easily, using adb over tcpip to remote control an android phone on linux."
 echo "Scripted by Sensy"
 
-
-
-echo ""
 # echo "USAGE"
 # echo "scrcpy-r [ip address]"
 # echo ""
@@ -28,7 +25,12 @@ echo ""
 case $1 in 
 
 	'')
-read -p "Please enter the IP address of the phone: " choice;
+adb devices #List devices
+adb tcpip 5500
+read -p "Please enter the IP address of the phone: " phone_ip;
+adb connect $phone_ip:5500 --select-tcpip
+scrcpy
+
  ;;
 	-h) #get help
 echo ""
