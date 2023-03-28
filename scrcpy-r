@@ -49,6 +49,15 @@ echo "3. ADB is installed on ubuntu"
 echo "4. scrcpy is installed on ubuntu"
 echo "5. The phone and the laptop are connected on the same network"
 ;;
+	--otg) #Activate with OTG mode
+adb devices #List devices
+adb tcpip 5500
+read -p "Please enter the IP address of the phone: " phone_ip;
+adb connect $phone_ip:5500 
 
+# echo "Please disconnect your phone and run scrcpy"
+read -p "OTG mode requires a USB connection to run: " run_scrcpy;
+scrcpy --otg
+;;
 
  esac
